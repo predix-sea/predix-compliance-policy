@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+predix:
+  compliance:
+    admin-token: test-admin-token
+    default-strategy: FAIL_CLOSED
+    geo:
+      provider: static
+      static-country-map:
+        "203.0.113.1": CN
+        "203.0.113.2": SG
+        "127.0.0.1": SG
